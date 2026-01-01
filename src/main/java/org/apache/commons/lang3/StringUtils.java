@@ -104,24 +104,32 @@ import org.apache.commons.lang3.stream.Streams;
  *  <li>whitespace - the characters defined by {@link Character#isWhitespace(char)}</li>
  *  <li>trim - the characters &lt;= 32 as in {@link String#trim()}</li>
  * </ul>
+/**
+ * <p>
+ * Provides highly reusable, {@code null}-safe operations on {@link String} objects.
+ * </p>
  *
- * <p>{@link StringUtils} handles {@code null} input Strings quietly.
- * That is to say that a {@code null} input will return {@code null}.
- * Where a {@code boolean} or {@code int} is being returned
- * details vary by method.</p>
+ * <p>
+ * This class contains static utility methods for common string manipulation tasks,
+ * including checking for empty or blank strings, trimming and padding,
+ * searching and replacing substrings, comparing strings safely,
+ * and modifying string content.
+ * </p>
  *
- * <p>A side effect of the {@code null} handling is that a
- * {@link NullPointerException} should be considered a bug in
- * {@link StringUtils}.</p>
+ * <p>
+ * All methods in this class handle {@code null} input values gracefully
+ * and do not throw {@link NullPointerException} unless explicitly documented.
+ * </p>
  *
- * <p>Methods in this class include sample code in their Javadoc comments to explain their operation.
- * The symbol {@code *} is used to indicate any input including {@code null}.</p>
- *
- * <p>#ThreadSafe#</p>
+ * <p>
+ * This class is intended to complement the functionality provided by
+ * {@link java.lang.String}.
+ * </p>
  *
  * @see String
  * @since 1.0
  */
+
 //@Immutable
 public class StringUtils {
 
